@@ -1,0 +1,24 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 248px; /* Width of A7 size */
+  height: 350px;    /* Height of A7 size */
+  overflow: hidden;
+  margin: auto; /* Center the slider */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better appearance */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
+  width: 100%;
+}
+
+.slider-image {
+  width: 248px; /* Exact width for A7 size */
+  height: 350px; /* Exact height for A7 size */
+  object-fit: cover; /* Ensure images cover the space without distortion */
+  flex: 0 0 auto; /* Ensure each image is contained within the defined size */
+  border-radius: 10px; /* Optional: Add border radius for aesthetics */
+}
