@@ -9,7 +9,6 @@ const Home = () => {
       <section className="home-section">
         <div className="video-container">
           <video autoPlay muted loop poster="banner.jpg" className="background-video">
-            <source src="/video/farmer.mp4" type="video/mp4" />
             <source src="farmer.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

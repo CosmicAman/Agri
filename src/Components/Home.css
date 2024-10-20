@@ -60,6 +60,7 @@ body {
   color: transparent;
   background-clip: text;
   animation: textAnimate 10s cubic-bezier(0.25, 0.1, 0.25, 1) infinite, fadeIn 1.5s ease-out forwards;
+  
 }
 
 .overlay-message p {
@@ -105,15 +106,15 @@ body {
 }
 
 .info-container h1 {
-  font-size: 2.5rem;
-  padding-bottom: 20px;
-  margin-top: 5%;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  padding-bottom: 30px;
+  margin-top: 8%;
   background: linear-gradient(90deg, rgb(0, 110, 255) 0%, rgb(39, 250, 2) 25%, rgb(0, 217, 255) 50%, rgb(127, 255, 16) 75%, rgb(30, 255, 0) 100%);
   background-size: 200% auto;
   color: transparent;
   background-clip: text;
   animation: textAnimate 10s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  text-align: justify;
 }
 
 .info-container p {
@@ -163,17 +164,18 @@ body {
   flex-direction: row-reverse;
   padding: 50px 100px;
   align-items: center;
+  margin-top: 2%;
   justify-content: space-around;
-  border-radius: 50px;
+  border-radius: 30px;
   animation: colorChangeShadow 15s infinite ease-in-out;
   background-color: rgba(240, 248, 255, 0.08);
 }
-
 
 .info-p p {
   max-width: 600px;
   text-align: center;
   line-height: 1.5;
+  font-size: 1.3rem;
 }
 
 /* Media Queries for Responsiveness */
@@ -203,6 +205,8 @@ body {
   }
 
   .info-p p {
+    max-width: 90%; /* Reduce width on smaller devices */
+    font-size: 1.1rem;
     padding-top: 10px;
   }
 }
@@ -221,18 +225,26 @@ body {
 
   .info-container h1 {
     font-size: 1.8rem;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 50px;
+
   }
 
   .info-container p {
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .info-p {
     padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 80px;
   }
 
   .info-p p {
+    max-width: 100%;
     font-size: 1rem;
+    line-height: 1.4; /* Adjust for better readability */
   }
 }
