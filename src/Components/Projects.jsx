@@ -37,6 +37,7 @@ const Projects = () => {
       <div className="gallery">
         {projectsData.map((project) => (
           <div className="gallery-item" key={project.id}>
+            
             <img loading='lazy' src={project.imgSrc} alt={project.title} className="gallery-image" />
             <div className="overlay">
               <h2>{project.title}</h2>

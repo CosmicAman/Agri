@@ -6,7 +6,7 @@
 
 .projects-section h1{
   margin-bottom: 10px;
-  font-size: 2em;
+  font-size: 4em;
   background: linear-gradient(90deg, rgb(0, 110, 255) 0%,rgb(39, 250, 2) 25%, rgb(0, 217, 255) 50%,rgb(127, 255, 16) 75%, rgb(30, 255, 0) 100%);
   background-size: 200% auto;
   color: transparent;
@@ -18,7 +18,7 @@
 
 .projects-section p{
   margin-bottom: 5%;
-  font-size: 1.2em;
+  font-size: 1.8em;
 }
 
 .gallery {
@@ -32,13 +32,46 @@
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border: solid 2px rgb(50, 245, 11);
+  border: solid 2px rgb(50, 245, 11); /* Initial border */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   flex-basis: auto;
   width: 300px; /* Fixed width for consistency */
   height: auto;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effect */
 }
+
+.gallery-item:hover {
+  border-color: rgb(255, 0, 150); /* Change border color on hover */
+  box-shadow: 0 4px 15px rgba(255, 0, 150, 0.6); /* Increase shadow on hover */
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 4px solid transparent; /* Initially no visible border */
+  box-sizing: border-box;
+  z-index: 1;
+  animation: borderGrow 1.5s linear infinite; /* Continuous animation */
+}
+
+@keyframes borderGrow {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(50, 245, 11, 0.5); /* Faint color in the middle of animation */
+  }
+  100% {
+    border-color: transparent; /* Back to no color */
+  }
+}
+
 
 .gallery-image {
   display: block;

@@ -35,7 +35,7 @@ const Navbar = ({ setActivePage }) => {
         <ul className={`nav-links-mobile ${isMobileMenuOpen ? 'nav-active' : ''}`}>
           <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Home'); closeMobileMenu(); }}>Home</a></li>
           <li><a className='nav-tag' href="#" onClick={() => { setActivePage('About'); closeMobileMenu(); }}>About</a></li>
-          <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Projects'); closeMobileMenu(); }}>Projects</a></li>
+          <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Projects'); closeMobileMenu(); }}>Crops</a></li>
           <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Contact'); closeMobileMenu(); }}>Contact</a></li>
           <li>
             <a href="tel:108">

@@ -8,10 +8,11 @@ const Home = () => {
     <>
       <section className="home-section">
         <div className="video-container">
-          <video autoPlay muted loop poster="banner.jpg" className="background-video">
-            <source src="farmer.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <video autoPlay muted loop preload="metadata" poster="banner.jpg" className="background-video">
+        <source src="farmer.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
           <div className="overlay-message">
             <h1>Welcome to Agri Sustain</h1>
             <p>
