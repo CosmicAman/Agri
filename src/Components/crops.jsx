@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import projectsData from './cropsData';
 import './crops.css';
 
-const Projects = () => {
+const Crops = () => {
   const [cropPrices, setCropPrices] = useState({});
 
   // Function to fetch prices from the API
@@ -56,4 +56,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Crops;

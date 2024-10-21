@@ -30,7 +30,7 @@ const Home = () => {
           <p>
             Our mission is to foster sustainable agricultural practices that help farmers achieve long-term productivity and prosperity. Through cutting-edge technology, data-driven insights, and community support, we aim to empower farmers with the tools they need to succeed in today’s dynamic environment.
           </p>
-        <ImageSlider/>
+          <ImageSlider/>
         </div>
 
         <h1>FEEDSTOCKS</h1>

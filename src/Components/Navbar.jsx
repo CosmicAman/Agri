@@ -15,10 +15,15 @@ const Navbar = ({ setActivePage }) => {
   return (
     <>
       <nav>
-        <div className="navbar-brand">Agri Sustain</div>
+        <div className="navbar-brand">
+          <img src="images/logo.png" alt="Agri Sustain Logo" className="navbar-logo" onClick={() => setActivePage('Home')} style={{ cursor: 'pointer' }} />
+          <span onClick={() => setActivePage('Home')} style={{ cursor: 'pointer' }}>
+            Agri Sustain
+          </span>
+        </div>
         <ul className={`nav-links ${isMobileMenuOpen ? 'nav-active' : ''}`}>
           <li><a href="#" onClick={() => setActivePage('Home')}>Home</a></li>
-          <li><a href="#" onClick={() => setActivePage('About')}>About</a></li>
+          <li><a href="#" onClick={() => setActivePage('About')}>Gov Scheme</a></li>
           <li><a href="#" onClick={() => setActivePage('Projects')}>Crops</a></li>
           <li><a href="#" onClick={() => setActivePage('Contact')}>Contact</a></li>
           <a className='sos1' href="tel:108"><img className='sos' src="images/help.png" alt="Help" /></a>
@@ -34,7 +39,7 @@ const Navbar = ({ setActivePage }) => {
         {/* Mobile menu */}
         <ul className={`nav-links-mobile ${isMobileMenuOpen ? 'nav-active' : ''}`}>
           <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Home'); closeMobileMenu(); }}>Home</a></li>
-          <li><a className='nav-tag' href="#" onClick={() => { setActivePage('About'); closeMobileMenu(); }}>About</a></li>
+          <li><a className='nav-tag' href="#" onClick={() => { setActivePage('About'); closeMobileMenu(); }}>Gov Scheme</a></li>
           <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Projects'); closeMobileMenu(); }}>Crops</a></li>
           <li><a className='nav-tag' href="#" onClick={() => { setActivePage('Contact'); closeMobileMenu(); }}>Contact</a></li>
           <li>

@@ -178,6 +178,55 @@ body {
   font-size: 1.3rem;
 }
 
+.gov-schemes-text {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 1.3rem; /* Default font size */
+  border-radius: 30px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  background-color: rgba(33, 33, 33, 0.565); /* Semi-transparent background */
+  font-weight: bolder;
+  box-shadow: 0px 5px 50px rgba(115, 255, 0, 0.711);
+  padding: 20px;
+}
+
+/* For the text inside */
+.gov-schemes-text p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: bisque;
+  margin: 0;
+}
+
+/* Responsive design for tablets and smaller devices */
+@media (max-width: 768px) {
+  .gov-schemes-text {
+    font-size: 1.1rem; /* Adjust font size */
+    padding: 15px; /* Reduce padding */
+    margin-top: 3%;
+  }
+  
+  .gov-schemes-text p {
+    font-size: 1rem; /* Smaller text for mobile */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .gov-schemes-text {
+    font-size: 1rem; /* Further reduce font size */
+    padding: 10px; /* Reduce padding */
+    margin-top: 2%;
+  }
+  
+  .gov-schemes-text p {
+    font-size: 0.9rem; /* Small text for mobile */
+  }
+}
+
+
 /* Media Queries for Responsiveness */
 
 /* Tablet Devices and Smaller */
