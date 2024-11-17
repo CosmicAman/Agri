@@ -4,7 +4,6 @@ import "./Contact.css";
 const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
-  const [email, setEmail] = useState("");
   const [location, setLocation] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -48,42 +47,6 @@ const Contact = () => {
     }
   };
 
-  // Function to handle the form submission to send email
-  const handleSubmitForm = (e) => {
-    e.preventDefault();
-
-    // Check if the email and message fields are filled
-    if (!email || !message) {
-      alert("Please fill out all fields.");
-      return;
-    }
-
-    // Prepare the email template data
-    const emailData = {
-      from_email: email,
-      message: message,
-    };
-
-    // Send the email using EmailJS
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID", // Replace with your service ID
-        "YOUR_TEMPLATE_ID", // Replace with your template ID
-        emailData,
-        "YOUR_USER_ID" // Replace with your user ID from EmailJS
-      )
-      .then(
-        (response) => {
-          alert("Message sent successfully!");
-          setEmail("");
-          setMessage("");
-        },
-        (error) => {
-          alert("Failed to send message. Please try again later.");
-        }
-      );
-  };
-
   return (
     <section className="contact-section">
       {/* Image Slider */}
@@ -109,16 +72,7 @@ const Contact = () => {
       <div className="contact-container">
         <h1>Contact Us</h1>
         <p>Feel free to reach out for more information about Agri Sustain.</p>
-        <form onSubmit={handleSubmitForm}>
-          <label>
-            Your Email:
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
+        <form>
           <label>
             Your Message:
             <textarea
